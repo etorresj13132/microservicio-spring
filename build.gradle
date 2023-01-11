@@ -25,9 +25,7 @@ test {
 }
 
 jacocoTestReport {
-  dependsOn test
-  	reports {
-		html.enabled true
-		xml.enabled true
-  }
+    reports {
+        csv.enabled true
+    }
 }
