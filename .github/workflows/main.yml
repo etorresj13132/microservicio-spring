@@ -82,3 +82,5 @@ jobs:
       - name: Deploy
         run: |-
           kubectl cluster-info
+          kubectl apply -f k8s/deployment.yml
+          kubectl apply -f k8s/service.yml          
