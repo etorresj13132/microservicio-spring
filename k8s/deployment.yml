@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: labfinal-services
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: labfinal-services
+  template:
+    metadata:
+      labels:
+        name: labfinal-services
+    spec:
+      containers:
+      - image: edu131982/lab-final:latest
+        name: labfinal-services
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: labfinal-server
